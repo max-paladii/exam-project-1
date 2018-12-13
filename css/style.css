@@ -1,0 +1,254 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+.header {
+    display: inline-block;
+    margin-left: 15px;
+    font-weight: normal;
+}
+
+nav {
+    display: inline;
+    grid-area: nav;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #BCBCBC;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.input_res {
+    width: 100%;
+    max-width: 640px;
+    box-sizing: border-box;
+}
+
+a {
+    padding: 0 12px;
+}
+
+body {
+    margin: 0px;
+    display: grid;
+    grid-template-columns: [grey_bg-start wh_bg-start] 1fr minmax(100px, 640px) 1fr [grey_bg-end wh_bg-end];
+    grid-template-rows: [wh_bg-start] 20px auto [grey_bg-start] auto [wh_bg-end] auto [grey_bg-end] 1fr fit-content(40%);
+    grid-template-areas: '. . .' '. header .' 'nav nav nav' '. add_status .' '. content .' 'footer footer footer';
+    grid-gap: 20px;
+    font-family: IBM Plex Sans;
+    background-color: #F2F2F2;
+}
+
+header {
+    grid-area: header;
+    background-color: #ffffff;
+}
+
+li.nav {
+    display: inline-block;
+}
+
+main {
+    grid-area: content;
+    margin-top: 12px;
+    display: block;
+}
+
+footer {
+    grid-area: footer;
+}
+
+div.add_status {
+    grid-area: add_status;
+    padding-bottom: 20px;
+}
+
+.post {
+    display: inline-block;
+}
+
+div.status {
+    background-color: #ffffff;
+    padding: 12px;
+    margin-bottom: 16px;
+    display: block;
+    clear: both;
+}
+
+div.user_follow {
+    background-color: #ffffff;
+    padding: 12px;
+    margin-bottom: 16px;
+}
+
+footer {
+    background-color: #BCBCBC;
+    text-align: center;
+}
+
+div.wh_bg {
+    background-color: #ffffff;
+    z-index: -1;
+    grid-area: wh_bg / wh_bg / wh_bg / wh_bg;
+}
+
+div.grey_bg {
+    z-index: -1;
+    background-color: #D8D8D8;
+    grid-area: grey_bg / grey_bg / grey_bg / grey_bg;
+}
+
+div.time {
+    display: inline-block;
+    float: right;
+    clear: both;
+    font-size: 12px;
+    padding-top: 3px;
+}
+
+img.picture {
+    object-fit: cover;
+    width: 120px;
+    height: 120px;
+    margin-right: 12px;
+    margin-bottom: 12px;
+}
+
+
+div.s_bottom {
+    border-top: 1px solid #d8d8d8;
+    display: block;
+    clear: both;
+}
+
+div.welcome {
+    display: inline-flex;
+}
+
+div.user {
+    padding-left: 12px;
+}
+
+button {
+    float: right;
+    clear: both;
+}
+
+.active {
+    background: #5E5E5E;
+    color: #ffffff;
+    padding: 8px 12px;
+}
+
+div.title {
+    font-family: IBM Plex Sans;
+    font-weight: 700;
+}
+
+div.profile-title {
+    font-family: IBM Plex Sans;
+    font-weight: 700;
+    display: block;
+    float: left;
+}
+
+button.search {
+    float: none;
+}
+
+div.text {
+    padding-top: 10px;
+    padding-bottom: 14px;
+    display: block;
+}
+
+div.search input {
+    width: 100%;
+    max-width: 560px;
+    box-sizing: border-box;
+    margin-right: 6px;
+}
+
+footer p {
+    font-size: 12px;
+}
+
+button.userpic {
+    float: none;
+    align-items: center;
+    margin-left: 52px;
+    margin-top: 11px;
+}
+
+label.userdata {
+    font-size: 14px;
+    margin-right: 6px;
+    display: block;
+    padding-bottom: 6px;
+}
+
+input.profile {
+    width: 360px;
+    margin-bottom: 12px;
+}
+
+div.text-block {
+    margin-bottom: 24px;
+}
+
+div.s_top-index {
+    border-bottom: 1px solid #d8d8d8;
+    padding-bottom: 6px;
+    clear: both;
+}
+
+.s_bottom_index {
+    border-top: 1px solid #d8d8d8;
+    padding-top: 6px;
+}
+
+div.userpic {
+    display: block;
+    float: left;
+    margin-right: 24px;
+    clear: both;
+}
+
+div.userpic img {
+    width: 160px;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+div.profiledata {
+    margin-top: 12px;
+    display: block;
+    float: left;
+}
+
+div.scontent {
+    display: flex;
+    padding-top: 12px;
+}
+
+div.stext {
+    padding-bottom: 12px;
+}
+
+div.sbuttons {
+    display: block;
+    float: right;
+    clear: both;
+}
+
+a.post {
+    padding: 0px;
+}
