@@ -16,58 +16,29 @@ SET time_zone = "+00:00";
 
 -- --------------------------------------------------------
 
---
--- Table structure for table `s_statuses`
---
+-- Create syntax for TABLE 's_followers'
+CREATE TABLE `s_followers` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL,
+  `follower_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
+-- Create syntax for TABLE 's_statuses'
 CREATE TABLE `s_statuses` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL,
   `status_text` varchar(200) NOT NULL,
-  `image` varchar(200) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `image` varchar(200) DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
--- --------------------------------------------------------
-
---
--- Table structure for table `s_users`
---
-
+-- Create syntax for TABLE 's_users'
 CREATE TABLE `s_users` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_email` varchar(255) DEFAULT NULL,
   `user_pass` varchar(255) DEFAULT NULL,
-  `user_nickname` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `s_statuses`
---
-ALTER TABLE `s_statuses`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `s_users`
---
-ALTER TABLE `s_users`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `s_statuses`
---
-ALTER TABLE `s_statuses`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `s_users`
---
-ALTER TABLE `s_users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  `user_nickname` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;

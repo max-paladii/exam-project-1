@@ -1,21 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>My Yadda</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Yadda Yadda Yadda</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,700">
+    <link href="../css/reg.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<form action="../auth/register" method="post">
-    <div>
-        Nickname: <input type="text" name="nickname" />
+<div class="profiledata">
+    <div class="title">Yadda Yadda Yadda</div>
+    <div class="text">Welcome to communication universe</div>
+    <form action="register" method="post">
+        <label class="userdata">Nickname
+            <br/>
+        </label>
+        <input type="text" class="profile" name="nickname" placeholder="Enter your nickname">
+        <label class="userdata">E-mail
+            <br/>
+        </label>
+        <input type="email" class="profile" name="email" placeholder="Enter your e-mail">
+        <label class="userdata">Password
+            <br/>
+        </label>
+        <input type="password" name="password" class="profile" placeholder="Enter your password">
+        <button class="userpic">Register</button>
+    </form>
+
+    <div class="container signin">
+        <div>Already have an account?
+            <a href="login">Sign in</a>.
+        </div>
     </div>
-    <div>
-        Email: <input type="email" name="email" />
-    </div>
-    <div>
-        Password: <input type="password" name="password" />
-    </div>
-    <div><input type="submit" value="Register"></div>
-</form>
+</div>
 </body>
 </html>
