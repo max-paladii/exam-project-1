@@ -13,8 +13,8 @@
 <header>
     <div class="welcome">
         <div class="title">Welcome to Y3</div>
-        <div class="user">$<?php if (!empty($username)) {
-                echo $username;
+        <div class="user">$<?php if (!empty($_SESSION['nickname'])) {
+                echo $_SESSION['nickname'];
             } ?></div>
     </div>
     <form>
@@ -48,13 +48,13 @@
         <textarea rows="6" cols="85" name="statusText" class="input_res" placeholder="Write something you want :)">
 </textarea>
         <?php if (isset($error_too_long)) { ?>
-            <div style="color: red;">Error: Text is too long</div>
+            <div style="color: blue; font-size: 12px">Error: Text is too long</div>
         <?php } ?>
         <br/>
         <input type="file" name="statusImage" value="Add image"/>
         <div class="sbuttons">
-            <input type="submit" value="Add Tag"/>
-            <input type="submit" value="Add Status"/>
+            <input type="text" placeholder="Add a tag" name="tag"/>
+            <input style="margin-left: 6px;" type="submit" value="Add Status"/>
         </div>
     </form>
 </div>
@@ -62,7 +62,7 @@
     <?php foreach(array_reverse($statuses) as $status) { ?>
     <div class="status">
         <div class="s_top-index">
-            <div class="post">$<?php echo $status['user_nickname'];?></div>
+            <div class="mpost" style="font-weight: bold">$<?php echo $status['user_nickname'];?></div>
             <div class="time"><?php echo $status['created_at'];?></div>
         </div>
 
@@ -74,7 +74,12 @@
             </div>
 
         <div class="s_bottom_index">
-            <a class="post" href="#">tag1</a>
+            <div class="mpost" href="#"><?php
+                if (!empty($status['tag']))
+                {
+                echo 'Tag is: ' . "¤" .$status['tag'];
+                } else
+                echo 'Tag is unset';?> </div>
         </div>
     </div>
     <?php } ?>

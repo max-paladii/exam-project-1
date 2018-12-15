@@ -13,8 +13,8 @@
 <header>
     <div class="welcome">
         <div class="title">Welcome to Y3</div>
-        <div class="user">$<?php if (!empty($username)) {
-                echo $username;
+        <div class="user">$<?php if (!empty($_SESSION['nickname'])) {
+                echo $_SESSION['nickname'];
             } ?></div>
     </div>
     <form>
@@ -47,17 +47,17 @@
                 <div class="text">Search for user to follow then press follow button.</div>
                 <div class="search">
                     <form action="../status/follow" method="post">
-                        <input type="text" name="username" value="Username to follow" placeholder="Enter user's name or surname" />
-                        <?php if (isset($error_user_not_found)) { ?>
-                            <div style="color: red;">Error: Username was not found</div>
-                        <?php } ?>
+                        <input type="text" name="username" placeholder="Enter user's name or surname" />
                         <button class="search">Follow</button>
+                        <?php if (isset($error_user_not_found)) { ?>
+                            <div style="color: blue; font-size: 12px; display: block;">Error: Username was not found</div>
+                        <?php } ?>
                     </form>
                 </div>
             </div>
     <div class="text-block">
-        <div class="title">Follow user</div>
-        <div class="text">Search for user to follow then press follow button.</div>
+        <div class="title">Your friends</div>
+        <div class="text">There is a list of users you following. If you want to stop following just use the button.</div>
     </div>
 
     <?php foreach ($followees as $followee) { ?>

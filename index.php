@@ -22,6 +22,7 @@ require_once "controller/Admin.php";
 require_once "controller/Auth.php";
 require_once "controller/Home.php";
 require_once "controller/Statuses.php";
+require_once "controller/Follow_ctrl.php";
 switch ($uri) {
     case '':
         (new Home())->index();
@@ -49,5 +50,8 @@ switch ($uri) {
         break;
     case 'auth/logout':
         (new Auth())->logout();
+        break;
+    case 'follow/follow':
+        (new Followctrl())->followeees();
         break;
 }

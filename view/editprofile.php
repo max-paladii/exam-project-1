@@ -13,8 +13,8 @@
 <header>
     <div class="welcome">
         <div class="title">Welcome to Y3</div>
-        <div class="user">$<?php if (!empty($username)) {
-                echo $username;
+        <div class="user">$<?php if (!empty($_SESSION['nickname'])) {
+                echo $_SESSION['nickname'];
             } ?></div>
     </div>
     <form>

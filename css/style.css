@@ -111,6 +111,7 @@ div.time {
     clear: both;
     font-size: 12px;
     padding-top: 3px;
+
 }
 
 img.picture {
@@ -249,6 +250,12 @@ div.sbuttons {
     clear: both;
 }
 
-a.post {
+.post {
+    display: inline-block;
+}
+
+.mpost {
     padding: 0px;
+    font-size: 12px;
+    display: inline-block;
 }

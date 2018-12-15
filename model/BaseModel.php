@@ -21,7 +21,7 @@ abstract class BaseModel
 
         $mysqli = new mysqli($host, $user, $password, $db, $port);
         if ($mysqli->connect_errno) {
-            echo "Не удалось подключиться к MySQL: " . $mysqli->connect_error;
+            echo "Could not connect to MySQL:" . $mysqli->connect_error;
         }
         return $mysqli;
     }

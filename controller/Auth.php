@@ -29,6 +29,7 @@ class Auth
                 die();
             } else {
                 $_SESSION['user_id'] = $user['id'];
+                $_SESSION['nickname'] = $user['user_nickname'];
                 header("location: ..");
                 die();
             }

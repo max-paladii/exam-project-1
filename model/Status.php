@@ -8,11 +8,11 @@
 
 class Status extends BaseModel
 {
-    public function add($userId, $statusText, $image)
+    public function add($userId, $statusText, $image, $tag)
     {
         $this->connection->query(
-            "INSERT into s_statuses (`user_id`, `status_text`, `image`) 
-            values ('$userId', '$statusText', '$image')");
+            "INSERT into s_statuses (`user_id`, `status_text`, `image`, `tag`) 
+            values ('$userId', '$statusText', '$image', '$tag')");
     }
 
     public function getStatuses($userId)
